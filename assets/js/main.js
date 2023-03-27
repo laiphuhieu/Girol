@@ -4,13 +4,13 @@ function initSlider() {
     slideBy: 1,
     autoplay: false,
     controls: true,
-    speed: 1300,
+    speed: 500,
     prevButton: ".btn-left",
     nextButton: ".btn-right",
   });
 }
 
-function mobileBar() {
+function handleMobileBar() {
   let btnMenu = document.querySelector(".menu-device-btn");
   let btnCloseMobileBar = document.querySelector(".close-menu");
   let home = document.querySelector(".home");
@@ -34,7 +34,26 @@ function mobileBar() {
   });
 }
 
+function handleMobileBarWindowResize() {
+  let windowWidth = window.innerWidth;
+  let home = document.querySelector(".home");
+  let subNav = document.querySelector(".sub-nav2");
+  let btnShowSubNav = document.querySelector(".more");
+
+  function clearStateMobileBar() {
+    home.classList.remove("mobile-active");
+    btnShowSubNav.classList.remove("show");
+    subNav.classList.remove("show");
+  }
+
+  if (windowWidth > 1023) clearStateMobileBar();
+}
+
+window.addEventListener("resize", function () {
+  handleMobileBarWindowResize();
+});
+
 window.onload = () => {
   initSlider();
-  mobileBar();
+  handleMobileBar();
 };

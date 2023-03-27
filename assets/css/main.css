@@ -743,11 +743,6 @@ input[type="text"]:focus-visible {
   background-color: rgba(0, 0, 0, 0.3) !important;
 }
 
-#tns1 {
-  width: calc(300%);
-  transition-duration: 1s;
-}
-
 .section-style-1 .hero-banner {
   height: 93vh;
 }
@@ -761,10 +756,6 @@ input[type="text"]:focus-visible {
   background-position: center;
   background-size: cover;
   z-index: 1;
-}
-
-#tns1 > .tns-item {
-  width: calc(100% / 3);
 }
 
 .overlay-body {
@@ -938,4 +929,8 @@ input[type="text"] {
 .menu-device-wrapper .is-active {
   text-decoration: none;
   color: #005b7c;
+}
+
+.search-box .site-search:focus-within {
+  box-shadow: 0 0 0 1px #e7c519 !important;
 }
