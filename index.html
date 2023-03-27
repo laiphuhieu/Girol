@@ -18,8 +18,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="./assets/js/main.js"></script>
   </head>
-  <body>
+  <body class="home">
     <div class="site-wrapper">
       <!-- header -->
       <header class="site-header header-sticky header-transparent-bg">
@@ -86,7 +89,7 @@
                           <a href="" class="sub-nav-link">INFINITY MEDS Oral</a>
                         </li>
                         <li class="sub-nav-list">
-                          <a href="" class="sub-nav-lin">SYNERGENYX Injection</a>
+                          <a href="" class="sub-nav-link">SYNERGENYX Injection</a>
                         </li>
                         <li class="sub-nav-list">
                           <a href="" class="sub-nav-link">SYNERGENYX Oral</a>
@@ -133,42 +136,89 @@
       <!-- content -->
       <div class="site-content">
         <div class="site-content-wrapper">
-          <!-- section1 -->
-          <section class="section-style-1">
-            <div class="slide-controller">
-              <button class="controller-btn btn-left">
+          <div class="section-style-1">
+            <div class="slide-controler" aria-label="Carousel Navigation" tabindex="0">
+              <button class="controler-btn btn-left" aria-controls="tns1" tabindex="-1" data-controls="prev">
                 <span><i class="material-icons">arrow_back</i></span>
               </button>
-              <button class="controller-btn btn-right">
+              <button class="controler-btn btn-right" aria-controls="tns1" tabindex="-1" data-controls="next">
                 <span><i class="material-icons">arrow_forward</i></span>
               </button>
             </div>
-            <div class="elementor-hero-img">
-              <div class="container banner-container">
-                <div class="row">
-                  <div class="col l-6 m-7 c-12 banner-info banner-left">
-                    <h1 class="banner-title">Trenbolon.H</h1>
-                    <p class="banner-descr">Trenbolone Hexahydrobenzyl Carbonate is a strong ,androgenic steroid which also has a high anabolic effect.Everyone who uses trenbolone is enthusiastic about the results:a fast gain in solid,high-quality muscle mass with a strength increase .In addition ,the regulate application over a number of weeks results in a well visible increased muscle hardness over the entire body without dieting at the same time.Unlike for most highly -androgenic steroids,trenbolone doesn’t aromatize.</p>
-                    <div class="product-mb">
-                      <img src="./assets/img/TRENBOLONE.H-scaled.jpg" alt="">
+            <div class="hero-banner">
+              <div class="hero-banner-item">
+                <div class="container banner-container">
+                  <div class="row">
+                    <div class="col l-6 m-7 c-12 banner-info banner-left">
+                      <h1 class="banner-title">Trenbolon.H</h1>
+                      <p class="banner-descr">Trenbolone Hexahydrobenzyl Carbonate is a strong ,androgenic steroid which also has a high anabolic effect.Everyone who uses trenbolone is enthusiastic about the results:a fast gain in solid,high-quality muscle mass with a strength increase .In addition ,the regulate application over a number of weeks results in a well visible increased muscle hardness over the entire body without dieting at the same time.Unlike for most highly -androgenic steroids,trenbolone doesn’t aromatize.</p>
+                      <div class="product-mb">
+                        <img src="./assets/img/TRENBOLONE.H-scaled.jpg" alt="">
+                      </div>
+                      <div class="banner-btns">
+                        <a href="#" class="banner-btn white-btn">Purchase</a>
+                        <a href="#" class="banner-btn animate-white-btn">More</a>
+                      </div>
+                    
                     </div>
-                    <div class="banner-btns">
-                      <a href="#" class="banner-btn white-btn">Purchase</a>
-                      <a href="#" class="banner-btn animate-white-btn">More</a>
-
-                    </div>
-                  
-                  </div>
-
-                  <div class="col l-6 m-5 c-0 banner-info banner-right">
-                    <div class="product-img">
-                      <img src="./assets/img/TRENBOLONE.H-scaled.jpg" alt="">
+                    <div class="col l-6 m-5 c-0 banner-info banner-right">
+                      <div class="product-img">
+                        <img src="./assets/img/TRENBOLONE.H-scaled.jpg" alt="">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="hero-banner-item">
+                  <div class="container banner-container">
+                    <div class="row">
+                      <div class="col l-6 m-7 c-12 banner-info banner-left">
+                        <h1 class="banner-title">Ment</h1>
+                        <p class="banner-descr">Trestolone Acetate will deliver a rock hard physique with significant gains in muscle at the same time. So you can consider this as one of the best supplements for muscle growth. By either using it alone or stacking it with other boosters, you can harden and cut your body’s physique to maximize its size and strength.</p>
+                        <div class="product-mb">
+                          <img src="./assets/img/TRENBOLONE.H-scaled.jpg" alt="">
+                        </div>
+                        <div class="banner-btns">
+                          <a href="#" class="banner-btn white-btn">Purchase</a>
+                          <a href="#" class="banner-btn animate-white-btn">More</a>
+                        </div>
+                          </div>
+                          <div class="col l-6 m-5 c-0 banner-info banner-right">
+                            <div class="product-img">
+                              <img src="./assets/img/TRENBOLONE.H-scaled.jpg" alt="">
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+
+              </div>
+              <div class="hero-banner-item">
+                  <div class="container banner-container">
+                    <div class="row">
+                      <div class="col l-6 m-7 c-12 banner-info banner-left">
+                        <h1 class="banner-title">Nebido</h1>
+                        <p class="banner-descr">Testosterone undecanoate is used to treat men who do not produce enough testosterone on
+                          their own. The androgen family of medicines includes testosterone. In males, testosterone plays a
+                          role in the development and maintenance of masculine traits including body hair and a deep voice. It is also required for natural sexual ability and desire, as well as muscle preservation and bone preservation.</p>
+                        <div class="product-mb">
+                          <img src="./assets/img/TRENBOLONE.H-scaled.jpg" alt="">
+                        </div>
+                        <div class="banner-btns">
+                          <a href="#" class="banner-btn white-btn">Purchase</a>
+                          <a href="#" class="banner-btn animate-white-btn">More</a>
+                        </div>
+                      </div>
+        
+                      <div class="col l-6 m-5 c-0 banner-info banner-right">
+                        <div class="product-img">
+                          <img src="./assets/img/TRENBOLONE.H-scaled.jpg" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
             </div>
-          </section>
+          </div>
 
           <!-- section2 -->
           <section class="section-style-2">
@@ -500,6 +550,67 @@
         </div>
       </footer>
     </div>
+
+    <!-- mobile menu bar -->
+    <div class="overlay-body"></div>
+    <div class="menu-device-wrapper">
+      <div class="close-menu">
+        <span>
+          <i class="material-icons">close</i>
+        </span>
+      </div>
+      <nav class="menu-device">
+        <div class="main-menu-container">
+          <ul class="main-nav-list">
+            <li class="main-nav-item is-active">
+              <a href="#" class="main-nav-link">Home</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#" class="main-nav-link">Shop</a>
+              <ul class="sub-nav2">
+                <li class="sub-nav-list">
+                  <a href="" class="sub-nav-link"
+                    >INFINITY MEDS Injection</a
+                  >
+                </li>
+                <li class="sub-nav-list">
+                  <a href="" class="sub-nav-link">INFINITY MEDS Oral</a>
+                </li>
+                <li class="sub-nav-list">
+                  <a href="" class="sub-nav-link">SYNERGENYX Injection</a>
+                </li>
+                <li class="sub-nav-list">
+                  <a href="" class="sub-nav-link">SYNERGENYX Oral</a>
+                </li>
+              </ul>
+              <div class="more">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+            <li class="main-nav-item">
+              <a href="#" class="main-nav-link">About Us</a>
+            </li>
+            <li class="main-nav-item">
+              <a href="#" class="main-nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="search-box search-box-device">
+        <div class="site-search">
+          <form action="" class="search-form">
+            <div class="search-form">
+              <input type="text" class="search-form-field" placeholder="Search products..."></input>
+            </div>
+            <div class="search-box-submit">
+              <input type="submit" name="" id="" class="search-submit" value="Search" >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
 
