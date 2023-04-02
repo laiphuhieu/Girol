@@ -1,6 +1,6 @@
 @media (max-width: 760px) {
   .container {
-    max-width: 450px;
+    max-width: 540px;
   }
 
   .products-area .small-products {
@@ -81,6 +81,10 @@
   .site-footer .row .col:not(:last-child) {
     margin-bottom: 40px;
   }
+
+  .product-item-width6 {
+    width: calc(6 * 100% / 12);
+  }
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -155,5 +159,9 @@
     float: none;
     width: 100%;
     margin-top: 0;
+  }
+
+  .product-item-width6 {
+    width: calc(6 * 100% / 12);
   }
 }

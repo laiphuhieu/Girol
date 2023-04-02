@@ -10,6 +10,19 @@ function initSlider() {
   });
 }
 
+function initProductsSlider() {
+  let slider2 = tns({
+    container: ".slider-container",
+    items: 1,
+    nav: true,
+    mouseDrag: true,
+    speed: 1000,
+    navAsThumbnails: true,
+    // controlsContainer: ".products-slider-controler",
+    preventActionWhenRunning: true,
+  });
+}
+
 function handleMobileBar() {
   let btnMenu = document.querySelector(".menu-device-btn");
   let btnCloseMobileBar = document.querySelector(".close-menu");
@@ -49,6 +62,15 @@ function handleMobileBarWindowResize() {
   if (windowWidth > 1023) clearStateMobileBar();
 }
 
+function handleMasonry() {
+  var elem = document.querySelector(".grid");
+  var msnry = new Masonry(elem, {
+    // options
+    itemSelector: ".product-wrapper",
+    gutter: 0,
+  });
+}
+
 window.addEventListener("resize", function () {
   handleMobileBarWindowResize();
 });
@@ -56,4 +78,8 @@ window.addEventListener("resize", function () {
 window.onload = () => {
   initSlider();
   handleMobileBar();
+  initProductsSlider();
+  handleMasonry();
 };
+
+let accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
