@@ -991,12 +991,12 @@ input[type="text"] {
   border: 1px solid transparent;
 }
 
-.category-wrapper .categories .category-item.active span {
+.category-wrapper .categories .category-item.is-active span {
   border-color: #f99a00;
   color: #f99a00;
 }
 
-.category-wrapper .categories .category-item:not(.active):hover span {
+.category-wrapper .categories .category-item:not(.is-active):hover span {
   border-color: #f99a00;
   color: #f99a00;
 }
