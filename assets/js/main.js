@@ -10,99 +10,99 @@ var categories = [
 var products = [
   {
     id: 1,
-    category: 4,
-    name: "product 1",
+    category: 2,
+    name: "Trenbolon.HAHAHAAHAH",
     img: "./assets/img/CLEN.B-scaled.jpg",
   },
   {
     id: 1,
     category: 1,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
+    name: "CLEN.B",
+    img: "./assets/img/placeholder.png",
   },
   {
     id: 1,
     category: 1,
-    name: "product 1",
+    name: "Trenbolon.HAHAH",
     img: "./assets/img/CLEN.B-scaled.jpg",
   },
   {
     id: 1,
     category: 3,
-    name: "product 1",
+    name: "CLEN.B",
+    img: "./assets/img/placeholder.png",
+  },
+  {
+    id: 1,
+    category: 1,
+    name: "Trenbolon.HAHAHAAH",
+    img: "./assets/img/TRENBOLONE.H-scaled.jpg",
+  },
+  {
+    id: 1,
+    category: 2,
+    name: "TrenbolonHAHAAHAH",
+    img: "./assets/img/CLEN.B-scaled.jpg",
+  },
+  {
+    id: 1,
+    category: 3,
+    name: "TrenbolonHAH",
+    img: "./assets/img/TRENBOLONE.H-scaled.jpg",
+  },
+  {
+    id: 1,
+    category: 2,
+    name: "CLEN.B",
+    img: "./assets/img/CLEN.B-scaled.jpg",
+  },
+  {
+    id: 1,
+    category: 4,
+    name: "TrenbolonAHAH",
     img: "./assets/img/CLEN.B-scaled.jpg",
   },
   {
     id: 1,
     category: 1,
-    name: "product 1",
+    name: "Trenbolon.HAHAHAAHAH",
+    img: "./assets/img/CLEN.B-scaled.jpg",
+  },
+  {
+    id: 1,
+    category: 4,
+    name: "TrenbolonAAHAH",
+    img: "./assets/img/placeholder.png",
+  },
+  {
+    id: 1,
+    category: 1,
+    name: "Trenbolon.HAHAHAAHAH",
+    img: "./assets/img/CLEN.B-scaled.jpg",
+  },
+  {
+    id: 1,
+    category: 4,
+    name: "Trenbolon.HAHAHAAHAH",
+    img: "./assets/img/placeholder.png",
+  },
+  {
+    id: 1,
+    category: 3,
+    name: "Trenbolon.HAHAHAAHAH",
     img: "./assets/img/CLEN.B-scaled.jpg",
   },
   {
     id: 1,
     category: 2,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
+    name: "CLEN.B",
+    img: "./assets/img/TRENBOLONE.H-scaled.jpg",
   },
   {
     id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
-  },
-  {
-    id: 1,
-    category: 4,
-    name: "product 1",
-    img: "./assets/img/CLEN.B-scaled.jpg",
+    category: 1,
+    name: "Trenbolon",
+    img: "./assets/img/placeholder.png",
   },
 ];
 
@@ -242,23 +242,56 @@ function filterProductItem(catId) {
 }
 
 function initCategory() {
-  let listTabCategory = document.querySelector(".categories");
+  let listCategory = document.querySelector(".categories");
   let listTabCategoryItem = document.querySelector(".grid");
 
-  //init tab category heading
-  function initCategoryHeading(category) {
-    let CategoryHeading = document.createElement("li");
+  //init category
+  function initCategory(category) {
+    let categoryHeading = document.createElement("li");
     let linkCategoryItem = document.createElement("span");
 
     linkCategoryItem.innerHTML = `${category.title}`;
-    CategoryHeading.appendChild(linkCategoryItem);
-    CategoryHeading.classList.add("category-item");
-    CategoryHeading.setAttribute("data-tab-category", category.id);
-    listTabCategory.appendChild(CategoryHeading);
+    categoryHeading.appendChild(linkCategoryItem);
+    categoryHeading.classList.add("category-item");
+    categoryHeading.setAttribute("data-tab-category", category.id);
+    listCategory.appendChild(categoryHeading);
+  }
+
+  // init category product
+  function initCategoryItem(product) {
+    let productList = document.createElement("div");
+    let productContent = document.createElement("div");
+    let productImg = document.createElement("img");
+    let productOverlay = document.createElement("div");
+    let productInfo = `<a href="#" class="info">
+    <h4 class="title">${product.name}</h4>
+  </a>`;
+
+    productList.classList.add(
+      "product-wrapper",
+      "product-item-width4",
+      "product-item-width6"
+    );
+    productList.setAttribute("data-tab-category-item", product.category);
+    productImg.src = "./assets/img/CLEN.B-scaled.jpg";
+
+    productContent.classList.add("product");
+    productOverlay.classList.add("overlay");
+
+    productContent.innerHTML = productInfo;
+    productContent.appendChild(productOverlay);
+    productContent.appendChild(productImg);
+
+    productList.appendChild(productContent);
+    listTabCategoryItem.appendChild(productList);
   }
 
   for (let category of categories) {
-    initCategoryHeading(category);
+    initCategory(category);
+  }
+
+  for (let product of products) {
+    initCategoryItem(product);
   }
 }
 
@@ -269,10 +302,10 @@ window.addEventListener("resize", function () {
 window.onload = () => {
   grid = document.querySelector(".grid");
 
+  initCategory();
   initSlider();
   handleMasonry();
   handleMobileBar();
   initProductsSlider();
   handleClickCategoryFilter();
-  initCategory();
 };
