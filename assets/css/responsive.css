@@ -161,7 +161,7 @@
     margin-top: 0;
   }
 
-  .product-item-width6 {
+  /* .product-item-width6 {
     width: calc(6 * 100% / 12);
-  }
+  } */
 }

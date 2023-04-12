@@ -1116,8 +1116,9 @@ input[type="text"] {
   padding: 0 15px;
 }
 
-.product-item-width4 {
-  width: calc(4 * 100% / 12);
+.product-item-width4,
+.grid-sizer {
+  width: calc((4 / 12) * 100%);
 }
 
 .category-wrapper .category-products .grid {

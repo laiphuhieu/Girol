@@ -212,3 +212,7 @@ button {
   width: 193px;
   height: 26px;
 }
+
+.is-hidden {
+  display: none !important;
+}
